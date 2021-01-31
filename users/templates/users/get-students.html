@@ -1,0 +1,15 @@
+{% extends "users/base.html" %}
+{% block content %}
+    <h1>Dear teacher, your student are:</h1>
+    {% for student in data %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+                <h5 class="mr-2">Student name: {{student.get_name}}</h5>
+            </div>
+            <h2 class="article-title">Description:</h2>
+            <p class="article-content">{{student}}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
